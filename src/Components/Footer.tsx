@@ -11,7 +11,7 @@ const navInfo = [
 		link: "/platform",
 	},
 	{
-		title: "Ai Training",
+		title: "AI Training",
 		link: "/ai-training",
 	},
 	{

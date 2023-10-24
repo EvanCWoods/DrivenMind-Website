@@ -1,7 +1,8 @@
 import SecurityIcon from "@mui/icons-material/Security";
 import TravelExploreIcon from "@mui/icons-material/TravelExplore";
 import SwipeRightIcon from "@mui/icons-material/SwipeRight";
-import SchoolIcon from "@mui/icons-material/School";
+// import SchoolIcon from "@mui/icons-material/School";
+import PublicIcon from "@mui/icons-material/Public";
 // icon, title, content
 
 const features = [
@@ -24,10 +25,10 @@ const features = [
 			"DrivenMind.ai is designed to be easy to use, and easy to understand. Your team will start seeing results immediately without having to try",
 	},
 	{
-		icon: <SchoolIcon fontSize="large" sx={{ color: "#8A2BE2" }} />,
-		title: "Dedicated AI Training",
+		icon: <PublicIcon fontSize="large" sx={{ color: "#8A2BE2" }} />,
+		title: "Dedicated Environment",
 		content:
-			"We will train your team to use AI in their day to day work, ensuring that you and your team are future proof. ",
+			"If your business needs to meet a very specific use case, we will provide a private environment that is dedicated to your business.",
 	},
 ];
 

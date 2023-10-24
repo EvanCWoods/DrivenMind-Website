@@ -1,14 +1,14 @@
 import { Grid, Typography } from "@mui/material";
-import features from "../../data/features";
+import features from "../../data/platform";
 import FeatureBox from "./FeatureBox";
 import { Link } from "react-router-dom";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-const Overview = () => {
+const PlatformOverview = () => {
 	return (
 		<Grid container marginTop={5} paddingX={10}>
 			<Grid item xs={12} md={4} marginTop={5}>
 				<Typography variant="h6" sx={{ color: "#8A2BE2" }}>
-					Overview
+					The Platform
 				</Typography>
 				<Typography variant="h3" marginTop={2}>
 					Your Business Is Missing Out
@@ -46,8 +46,22 @@ const Overview = () => {
 					return <FeatureBox {...feature} />;
 				})}
 			</Grid>
+			{/* Description */}
+			{/* <Grid item xs={0} md={2}></Grid>
+			<Grid item xs={12} md={8} marginY={10}>
+				<Typography variant="h3" marginTop={5} textAlign="center">
+					How It Works
+				</Typography>
+				<Typography variant="body1" marginTop={2} textAlign="center">
+					DrivenMind.ai stands unrivalled as the sole platform enabling
+					businesses to utilize AI securely and precisely. With ongoing support
+					from Microsoft, we guarantee our customers access to the latest and
+					most secure technological advancements.
+				</Typography>
+			</Grid>
+			<Grid item xs={0} md={2}></Grid> */}
 		</Grid>
 	);
 };
 
-export default Overview;
+export default PlatformOverview;

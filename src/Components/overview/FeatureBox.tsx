@@ -9,10 +9,10 @@ interface IFeatureBoxProps {
 const FeatureBox: React.FC<IFeatureBoxProps> = ({ icon, title, content }) => {
 	return (
 		<Paper
-			elevation={2}
+			elevation={3}
 			sx={{
 				paddingX: 2,
-				paddingY: 10,
+				paddingY: 5,
 				width: "280px",
 				borderRadius: 5,
 				marginTop: 5,
