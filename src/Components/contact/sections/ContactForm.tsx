@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Typography, TextField, Button, Grid, Paper } from "@mui/material";
+import {
+	Box,
+	Typography,
+	TextField,
+	Button,
+	Grid,
+	Paper,
+	useMediaQuery,
+} from "@mui/material";
 import useContactForm from "../../../hooks/useContactForm"; // Importing custom hook
 
 /**
@@ -9,11 +17,16 @@ import useContactForm from "../../../hooks/useContactForm"; // Importing custom 
  */
 const ContactForm: React.FC = () => {
 	const formik = useContactForm();
+	const isSmallScreen = useMediaQuery("(max-width: 760px)");
 
 	return (
 		<Paper
 			elevation={3}
-			sx={{ borderRadius: "15px", padding: 3, maxWidth: "420px" }}
+			sx={{
+				borderRadius: "15px",
+				padding: 3,
+				width: isSmallScreen ? "100%" : "420px",
+			}}
 		>
 			<Typography variant="h4" paddingY={3} textAlign="center">
 				Get In Touch

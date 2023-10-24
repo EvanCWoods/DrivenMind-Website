@@ -6,25 +6,29 @@ const AITraining = () => {
 	const isSmallScreen = useMediaQuery("(max-width: 760px)");
 	return (
 		<Box>
-			{/* <Typography variant="h4" gutterBottom>
-				The DrivenMind Platform
+			<Typography
+				variant="h3"
+				gutterBottom
+				fontSize={isSmallScreen ? "2rem" : "3rem"}
+				marginTop={5}
+				textAlign="center"
+			>
+				AI Training
 			</Typography>
 
-			<Typography variant="body1" paragraph>
-				The AI revolution isn't just a trend or a buzzword - it's a fundamental
-				shift in the way businesses operate, analyze data, and serve their
-				customers. ... // You can continue to add the other points here...
-			</Typography> */}
 			<Grid container padding={4}>
 				<Grid
 					item
 					md={12}
 					lg={6}
-					paddingRight={20}
-					paddingLeft={10}
+					paddingX={isSmallScreen ? 2 : 10}
 					marginTop={5}
 				>
-					<Typography variant="h4" gutterBottom>
+					<Typography
+						variant="h4"
+						gutterBottom
+						fontSize={isSmallScreen ? "1.7rem" : "2rem"}
+					>
 						Dedicated Training
 					</Typography>
 					<Typography variant="body1" paragraph>
@@ -43,7 +47,7 @@ const AITraining = () => {
 						alt="data security"
 						style={{
 							width: "400px",
-							display: isSmallScreen ? "block" : "none",
+							display: !isSmallScreen ? "block" : "none",
 						}}
 					/>
 				</Grid>
@@ -54,7 +58,7 @@ const AITraining = () => {
 						alt="data security"
 						style={{
 							width: "400px",
-							display: isSmallScreen ? "block" : "none",
+							display: !isSmallScreen ? "block" : "none",
 						}}
 					/>
 				</Grid>
@@ -62,11 +66,14 @@ const AITraining = () => {
 					item
 					md={12}
 					lg={6}
-					paddingLeft={20}
-					paddingRight={10}
+					paddingX={isSmallScreen ? 2 : 10}
 					marginTop={5}
 				>
-					<Typography variant="h4" gutterBottom>
+					<Typography
+						variant="h4"
+						gutterBottom
+						fontSize={isSmallScreen ? "1.7rem" : "2rem"}
+					>
 						Future Proof Your Business
 					</Typography>
 					<Typography variant="body1" paragraph>
@@ -83,11 +90,14 @@ const AITraining = () => {
 					item
 					md={12}
 					lg={6}
-					paddingRight={20}
-					paddingLeft={10}
+					paddingX={isSmallScreen ? 2 : 10}
 					marginTop={5}
 				>
-					<Typography variant="h4" gutterBottom>
+					<Typography
+						variant="h4"
+						gutterBottom
+						fontSize={isSmallScreen ? "1.7rem" : "2rem"}
+					>
 						Gain a Competitive Advantage
 					</Typography>
 					<Typography variant="body1" paragraph>
@@ -106,7 +116,7 @@ const AITraining = () => {
 						alt="data security"
 						style={{
 							width: "400px",
-							display: isSmallScreen ? "block" : "none",
+							display: !isSmallScreen ? "block" : "none",
 						}}
 					/>
 				</Grid>

@@ -6,11 +6,17 @@ const Platform = () => {
 	const isSmallScreen = useMediaQuery("(max-width: 760px)");
 	return (
 		<Box>
-			{/* <Typography variant="h4" gutterBottom>
+			<Typography
+				variant="h3"
+				gutterBottom
+				fontSize={isSmallScreen ? "2rem" : "3rem"}
+				marginTop={5}
+				textAlign="center"
+			>
 				The DrivenMind Platform
 			</Typography>
 
-			<Typography variant="body1" paragraph>
+			{/* <Typography variant="body1" paragraph>
 				The AI revolution isn't just a trend or a buzzword - it's a fundamental
 				shift in the way businesses operate, analyze data, and serve their
 				customers. ... // You can continue to add the other points here...
@@ -20,11 +26,14 @@ const Platform = () => {
 					item
 					md={12}
 					lg={6}
-					paddingRight={20}
-					paddingLeft={10}
+					paddingX={isSmallScreen ? 2 : 10}
 					marginTop={5}
 				>
-					<Typography variant="h4" gutterBottom>
+					<Typography
+						variant="h4"
+						gutterBottom
+						fontSize={isSmallScreen ? "1.7rem" : "2rem"}
+					>
 						Keep Your Data Safe
 					</Typography>
 					<Typography variant="body1" paragraph>
@@ -47,7 +56,7 @@ const Platform = () => {
 						alt="data security"
 						style={{
 							width: "400px",
-							display: isSmallScreen ? "block" : "none",
+							display: !isSmallScreen ? "block" : "none",
 						}}
 					/>
 				</Grid>
@@ -58,7 +67,7 @@ const Platform = () => {
 						alt="data security"
 						style={{
 							width: "400px",
-							display: isSmallScreen ? "block" : "none",
+							display: !isSmallScreen ? "block" : "none",
 						}}
 					/>
 				</Grid>
@@ -66,11 +75,14 @@ const Platform = () => {
 					item
 					md={12}
 					lg={6}
-					paddingLeft={20}
-					paddingRight={10}
+					paddingX={isSmallScreen ? 2 : 10}
 					marginTop={5}
 				>
-					<Typography variant="h4" gutterBottom>
+					<Typography
+						variant="h4"
+						gutterBottom
+						fontSize={isSmallScreen ? "1.7rem" : "2rem"}
+					>
 						Enhanced Results
 					</Typography>
 					<Typography variant="body1" paragraph>
@@ -92,11 +104,14 @@ const Platform = () => {
 					item
 					md={12}
 					lg={6}
-					paddingRight={20}
-					paddingLeft={10}
+					paddingX={isSmallScreen ? 2 : 10}
 					marginTop={5}
 				>
-					<Typography variant="h4" gutterBottom>
+					<Typography
+						variant="h4"
+						gutterBottom
+						fontSize={isSmallScreen ? "1.7rem" : "2rem"}
+					>
 						Easy to Use
 					</Typography>
 					<Typography variant="body1" paragraph>
@@ -119,7 +134,7 @@ const Platform = () => {
 						alt="data security"
 						style={{
 							width: "400px",
-							display: isSmallScreen ? "block" : "none",
+							display: !isSmallScreen ? "block" : "none",
 						}}
 					/>
 				</Grid>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 // import Point from "../../../assets/WhatWeDoAssets/WhatWeDoPoint.svg";
 
 const benefits = [
@@ -14,20 +14,33 @@ const benefits = [
  *
  * @returns JSX (React elements) that will be rendered by the React application. It renders a section with a title and a list of benefits.
  */
-const BenefitSection: React.FC = () => (
-	<Box display="flex" flexDirection="column" mt={4} mb={8} ml={15}>
-		<Typography variant="h2">Learn More About DrivenMind.ai</Typography>
-		<Box mt={4}>
-			{benefits.map((benefit, index) => (
-				<Box display="flex" alignItems="center" mt={6} width="500px">
-					{/* <img src={Point} alt="point" style={{ height: "20px" }} /> */}
-					<Typography variant="h5" sx={{ ml: 2, fontSize: "1.8em" }}>
-						{benefit}
-					</Typography>
-				</Box>
-			))}
+const BenefitSection: React.FC = () => {
+	const isSmallScreen = useMediaQuery("(max-width: 760px)");
+	return (
+		<Box
+			display="flex"
+			flexDirection="column"
+			mt={4}
+			mb={8}
+			marginLeft={isSmallScreen ? 0 : 5}
+		>
+			<Typography variant="h2" fontSize={isSmallScreen ? "2.5rem" : "4rem"}>
+				Learn More About DrivenMind.ai
+			</Typography>
+			<Box mt={4}>
+				{benefits.map((benefit, index) => (
+					<Box display="flex" alignItems="center" mt={isSmallScreen ? 2 : 5}>
+						{/* <img src={Point} alt="point" style={{ height: "20px" }} /> */}
+						<Typography
+							variant="h5"
+							sx={{ ml: 2, fontSize: isSmallScreen ? "1.2rem" : "1.5rem" }}
+						>
+							{benefit}
+						</Typography>
+					</Box>
+				))}
+			</Box>
 		</Box>
-	</Box>
-);
-
+	);
+};
 export default BenefitSection;

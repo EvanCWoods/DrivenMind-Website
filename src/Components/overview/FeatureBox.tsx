@@ -1,4 +1,4 @@
-import { Paper, Typography } from "@mui/material";
+import { Paper, Typography, useMediaQuery } from "@mui/material";
 import React from "react";
 
 interface IFeatureBoxProps {
@@ -7,6 +7,8 @@ interface IFeatureBoxProps {
 	content: string;
 }
 const FeatureBox: React.FC<IFeatureBoxProps> = ({ icon, title, content }) => {
+	const isSmallScreen = useMediaQuery("(max-width: 760px)");
+
 	return (
 		<Paper
 			elevation={3}
@@ -16,7 +18,7 @@ const FeatureBox: React.FC<IFeatureBoxProps> = ({ icon, title, content }) => {
 				width: "280px",
 				borderRadius: 5,
 				marginTop: 5,
-				marginX: 5,
+				marginX: isSmallScreen ? 0 : 5,
 			}}
 		>
 			{/* Icon */}

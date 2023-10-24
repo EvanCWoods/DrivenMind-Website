@@ -1,8 +1,15 @@
-import { Box, Button, TextField, Typography } from "@mui/material";
+import {
+	Box,
+	Button,
+	TextField,
+	Typography,
+	useMediaQuery,
+} from "@mui/material";
 import LandingImage from "../assets/landing-background.svg";
 import MicrosoftLogo from "../assets/Microsoft_logo.png";
 
 const Landing = () => {
+	const isSmallScreen = useMediaQuery("(max-width: 760px)");
 	return (
 		<Box
 			sx={{
@@ -13,7 +20,7 @@ const Landing = () => {
 				width: "100%",
 				height: "auto",
 				marginTop: "-60px",
-				paddingY: "200px",
+				paddingY: isSmallScreen ? "100px" : "200px",
 				display: "flex",
 				justifyContent: "center",
 				alignItems: "center",
@@ -21,10 +28,20 @@ const Landing = () => {
 		>
 			{/* Text */}
 			<Box display="flex" justifyContent="center" flexWrap="wrap">
-				<Typography variant="h2" width="100%" textAlign="center">
+				<Typography
+					variant="h2"
+					width="100%"
+					textAlign="center"
+					fontSize={isSmallScreen ? "2.5rem" : "4rem"}
+				>
 					Revolutionise Your Business
 				</Typography>
-				<Typography variant="h2" width="100%" textAlign="center">
+				<Typography
+					variant="h2"
+					width="100%"
+					textAlign="center"
+					fontSize={isSmallScreen ? "2.5rem" : "4rem"}
+				>
 					With DrivenMind.ai
 				</Typography>
 				<Typography
@@ -32,12 +49,20 @@ const Landing = () => {
 					width="100%"
 					textAlign="center"
 					marginTop={3}
+					paddingX={3}
 					maxWidth="900px"
+					fontSize={isSmallScreen ? "1.1rem" : "1.5rem"}
 				>
 					We are a team of passionate AI engineers and developers who are
 					committed to helping you use AI to get the most out of your business.
 				</Typography>
-				<Typography variant="h6" width="100%" textAlign="center" marginTop={3}>
+				<Typography
+					variant="h6"
+					width="100%"
+					textAlign="center"
+					marginTop={3}
+					fontSize={isSmallScreen ? "1.1rem" : "1.5rem"}
+				>
 					Proudly Supported By Microsoft{" "}
 					<img
 						src={MicrosoftLogo}
@@ -56,17 +81,17 @@ const Landing = () => {
 								},
 							},
 							background: "white",
-							width: "280px",
+							width: isSmallScreen ? "220px" : "280px", // Conditional size based on isSmallScreen
 							borderRadius: "5px",
 						}}
 					/>
 					<Button
 						sx={{
-							borderRadius: "10px",
+							borderRadius: isSmallScreen ? "8px" : "10px", // Conditional size based on isSmallScreen
 							background: "#8A2BE2",
 							color: "white",
 							paddingY: 0,
-							paddingX: 2,
+							paddingX: isSmallScreen ? 1 : 2, // Conditional padding based on isSmallScreen
 							marginLeft: 1,
 							textTransform: "none",
 							"&:hover": {
