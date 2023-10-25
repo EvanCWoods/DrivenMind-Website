@@ -7,9 +7,11 @@ import {
 } from "@mui/material";
 import LandingImage from "../assets/landing-background.svg";
 import MicrosoftLogo from "../assets/Microsoft_logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Landing = () => {
 	const isSmallScreen = useMediaQuery("(max-width: 760px)");
+	const navigate = useNavigate();
 	return (
 		<Box
 			sx={{
@@ -71,7 +73,7 @@ const Landing = () => {
 					/>
 				</Typography>
 				<Box display="flex" marginTop={10}>
-					<TextField
+					{/* <TextField
 						placeholder="Enter your email"
 						variant="outlined"
 						sx={{
@@ -84,14 +86,15 @@ const Landing = () => {
 							width: isSmallScreen ? "220px" : "280px", // Conditional size based on isSmallScreen
 							borderRadius: "5px",
 						}}
-					/>
+					/> */}
 					<Button
+						onClick={() => navigate("/contact")}
 						sx={{
 							borderRadius: isSmallScreen ? "8px" : "10px", // Conditional size based on isSmallScreen
 							background: "#8A2BE2",
 							color: "white",
-							paddingY: 0,
-							paddingX: isSmallScreen ? 1 : 2, // Conditional padding based on isSmallScreen
+							paddingY: 1.5,
+							paddingX: isSmallScreen ? 4 : 4, // Conditional padding based on isSmallScreen
 							marginLeft: 1,
 							textTransform: "none",
 							"&:hover": {
@@ -99,7 +102,7 @@ const Landing = () => {
 							},
 						}}
 					>
-						Book a Demo!
+						Get In Touch!
 					</Button>
 				</Box>
 			</Box>

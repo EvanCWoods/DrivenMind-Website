@@ -31,49 +31,38 @@ const ContactForm: React.FC = () => {
 			<Typography variant="h4" paddingY={3} textAlign="center">
 				Get In Touch
 			</Typography>
-			<form onSubmit={formik.handleSubmit}>
-				<Grid container spacing={1}>
-					<Grid item xs={6}>
+			<form action="https://api.web3forms.com/submit" method="POST">
+				<input
+					type="hidden"
+					name="access_key"
+					value="4bb7a909-f4de-45b6-ab20-23bf7f51e996"
+				/>
+
+				{/* <input type="text" name="name" required />
+				<input type="email" name="email" required />
+				<textarea name="message" required></textarea>
+				<div className="h-captcha" data-captcha="true"></div>
+				<button type="submit">Submit Form</button>
+			</form> */}
+				<Grid container spacing={5}>
+					<Grid item xs={12}>
 						<TextField
 							fullWidth
-							id="firstName"
-							name="firstName"
-							label="First Name"
-							value={formik.values.firstName}
+							type="text"
+							id="name"
+							name="name"
+							label="Full Name"
+							value={formik.values.name}
 							onChange={formik.handleChange}
-							error={
-								formik.touched.firstName && Boolean(formik.errors.firstName)
-							}
-							// helperText={formik.touched.firstName && formik.errors.firstName}
-						/>
-					</Grid>
-					<Grid item xs={6}>
-						<TextField
-							fullWidth
-							id="lastName"
-							name="lastName"
-							label="Last Name"
-							value={formik.values.lastName}
-							onChange={formik.handleChange}
-							error={formik.touched.lastName && Boolean(formik.errors.lastName)}
+							error={formik.touched.name && Boolean(formik.errors.name)}
 							// helperText={formik.touched.lastName && formik.errors.lastName}
 						/>
 					</Grid>
+
 					<Grid item xs={12}>
 						<TextField
 							fullWidth
-							id="company"
-							name="company"
-							label="Company"
-							value={formik.values.company}
-							onChange={formik.handleChange}
-							error={formik.touched.company && Boolean(formik.errors.company)}
-							// helperText={formik.touched.company && formik.errors.company}
-						/>
-					</Grid>
-					<Grid item xs={12}>
-						<TextField
-							fullWidth
+							type="email"
 							id="email"
 							name="email"
 							label="Email"
@@ -86,19 +75,8 @@ const ContactForm: React.FC = () => {
 					<Grid item xs={12}>
 						<TextField
 							fullWidth
-							id="phone"
-							name="phone"
-							label="Phone"
-							value={formik.values.phone}
-							onChange={formik.handleChange}
-							error={formik.touched.phone && Boolean(formik.errors.phone)}
-							// helperText={formik.touched.phone && formik.errors.phone}
-						/>
-					</Grid>
-					<Grid item xs={12}>
-						<TextField
-							fullWidth
 							multiline
+							type="text"
 							rows={4}
 							id="message"
 							name="message"

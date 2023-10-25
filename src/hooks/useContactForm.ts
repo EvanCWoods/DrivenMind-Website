@@ -16,8 +16,7 @@ const validationSchema = yup.object({
 const useContactForm = () => {
 	return useFormik({
 		initialValues: {
-			firstName: "",
-			lastName: "",
+			name: "",
 			company: "",
 			email: "",
 			phone: "",
