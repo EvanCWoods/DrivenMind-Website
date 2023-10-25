@@ -1,5 +1,5 @@
 import { Box, Button, Typography, useMediaQuery } from "@mui/material";
-import LandingImage from "../assets/landing-background.svg";
+import LandingImage from "../assets/Rectangle37-6.svg";
 import MicrosoftLogo from "../assets/Microsoft_logo.png";
 import { useNavigate } from "react-router-dom";
 
