@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	Box,
 	Typography,
@@ -7,8 +7,12 @@ import {
 	Grid,
 	Paper,
 	useMediaQuery,
+	IconButton,
+	CircularProgress,
 } from "@mui/material";
 import useContactForm from "../../../hooks/useContactForm"; // Importing custom hook
+import CheckIcon from "@mui/icons-material/Check";
+import CloseIcon from "@mui/icons-material/Close";
 
 /**
  * Renders a form for users to submit their contact information.
@@ -18,6 +22,33 @@ import useContactForm from "../../../hooks/useContactForm"; // Importing custom 
 const ContactForm: React.FC = () => {
 	const formik = useContactForm();
 	const isSmallScreen = useMediaQuery("(max-width: 760px)");
+	const [status, setStatus] = useState<
+		"idle" | "loading" | "success" | "failure"
+	>("idle");
+
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+
+		setStatus("loading");
+
+		const formData = new FormData(e.currentTarget);
+
+		try {
+			const response = await fetch("https://api.web3forms.com/submit", {
+				method: "POST",
+				body: formData,
+			});
+
+			if (response.ok) {
+				setStatus("success");
+				formik.resetForm();
+			} else {
+				setStatus("failure");
+			}
+		} catch (error) {
+			setStatus("failure");
+		}
+	};
 
 	return (
 		<Paper
@@ -31,19 +62,12 @@ const ContactForm: React.FC = () => {
 			<Typography variant="h4" paddingY={3} textAlign="center">
 				Get In Touch
 			</Typography>
-			<form action="https://api.web3forms.com/submit" method="POST">
+			<form onSubmit={handleSubmit}>
 				<input
 					type="hidden"
 					name="access_key"
 					value="4bb7a909-f4de-45b6-ab20-23bf7f51e996"
 				/>
-
-				{/* <input type="text" name="name" required />
-				<input type="email" name="email" required />
-				<textarea name="message" required></textarea>
-				<div className="h-captcha" data-captcha="true"></div>
-				<button type="submit">Submit Form</button>
-			</form> */}
 				<Grid container spacing={5}>
 					<Grid item xs={12}>
 						<TextField
@@ -87,20 +111,38 @@ const ContactForm: React.FC = () => {
 					</Grid>
 				</Grid>
 				<Box paddingTop={4} display="flex" justifyContent="center">
-					<Button
-						fullWidth
-						variant="contained"
-						type="submit"
-						sx={{
-							py: 1.5,
-							px: 6,
-							borderRadius: "10px",
-							background: "#8A2BE2",
-							color: "white",
-						}}
-					>
-						Submit
-					</Button>
+					{status === "idle" || status === "loading" ? (
+						<Button
+							fullWidth
+							variant="contained"
+							type="submit"
+							disabled={status === "loading"}
+							sx={{
+								py: 1.5,
+								px: 6,
+								borderRadius: "10px",
+								background: "#8A2BE2",
+								color: "white",
+							}}
+						>
+							{status === "loading" ? (
+								<CircularProgress size={24} color="inherit" />
+							) : (
+								"Submit"
+							)}
+						</Button>
+					) : (
+						<IconButton
+							sx={{ color: status === "success" ? "green" : "error" }}
+							aria-label={
+								status === "success"
+									? "submitted successfully"
+									: "submission failed"
+							}
+						>
+							{status === "success" ? <CheckIcon /> : <CloseIcon />}
+						</IconButton>
+					)}
 				</Box>
 			</form>
 		</Paper>
