@@ -1,10 +1,4 @@
-import {
-	Box,
-	Button,
-	TextField,
-	Typography,
-	useMediaQuery,
-} from "@mui/material";
+import { Box, Button, Typography, useMediaQuery } from "@mui/material";
 import LandingImage from "../assets/landing-background.svg";
 import MicrosoftLogo from "../assets/Microsoft_logo.png";
 import { useNavigate } from "react-router-dom";
