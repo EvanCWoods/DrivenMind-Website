@@ -59,7 +59,7 @@ const Landing = () => {
 					marginTop={3}
 					fontSize={isSmallScreen ? "1.1rem" : "1.5rem"}
 				>
-					Proudly Supported By Microsoft{" "}
+					Proudly Sponsored By Microsoft{" "}
 					<img
 						src={MicrosoftLogo}
 						alt="microsoft logo"
