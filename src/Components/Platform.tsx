@@ -1,10 +1,11 @@
 import React from "react";
 import { Box, Typography, useMediaQuery, Paper } from "@mui/material";
 import aiPlatform from "../assets/ai-platform.png";
+import { useNavigate } from "react-router-dom";
 
 const Platform = () => {
 	const isSmallScreen = useMediaQuery("(max-width: 760px)");
-
+	const navigate = useNavigate();
 	return (
 		<Box>
 			<img
@@ -107,6 +108,26 @@ const Platform = () => {
 						organization.
 					</Typography>
 				</Paper>
+			</Box>
+			<Box
+				paddingY={3}
+				textAlign="center"
+				width="70%"
+				mx="15%"
+				borderRadius={10}
+				sx={{
+					background: "#8A2BE2",
+					color: "white",
+					"&:hover": { cursor: "pointer", background: "#943de4" },
+				}}
+				onClick={() =>
+					window.open("https://test-drivenmind.azurewebsites.net/")
+				}
+			>
+				<Typography variant="h3">Visit The Platform!</Typography>
+				<Typography variant="body1">
+					Try it out and see how DrivenMind will transform your business.
+				</Typography>
 			</Box>
 		</Box>
 	);
