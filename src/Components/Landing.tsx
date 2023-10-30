@@ -59,7 +59,7 @@ const Landing = () => {
 					marginTop={3}
 					fontSize={isSmallScreen ? "1.1rem" : "1.5rem"}
 				>
-					Proudly Sponsored By Microsoft{" "}
+					Proudly Partnered with Microsoft for Startups
 					<img
 						src={MicrosoftLogo}
 						alt="microsoft logo"
@@ -96,7 +96,7 @@ const Landing = () => {
 							},
 						}}
 					>
-						Get In Touch!
+						<Typography variant="body1">Get In Touch!</Typography>
 					</Button>
 				</Box>
 			</Box>

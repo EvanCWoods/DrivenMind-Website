@@ -1,82 +1,58 @@
 import React from "react";
-import { Box, Typography, Grid, useMediaQuery } from "@mui/material";
-import DataSecurity from "../assets/data-security.png";
+import { Box, Typography, useMediaQuery, Paper } from "@mui/material";
+import aiPlatform from "../assets/ai-platform.png";
 
 const Platform = () => {
 	const isSmallScreen = useMediaQuery("(max-width: 760px)");
+
 	return (
 		<Box>
-			<Typography
-				variant="h3"
-				gutterBottom
-				fontSize={isSmallScreen ? "2rem" : "3rem"}
-				marginTop={5}
-				textAlign="center"
-			>
-				The DrivenMind Platform
-			</Typography>
+			<img
+				src={aiPlatform}
+				alt="ai training"
+				style={{
+					width: isSmallScreen ? "100%" : "70%",
+					marginLeft: isSmallScreen ? "0%" : "15%",
+				}}
+			/>
 
-			{/* <Typography variant="body1" paragraph>
-				The AI revolution isn't just a trend or a buzzword - it's a fundamental
-				shift in the way businesses operate, analyze data, and serve their
-				customers. ... // You can continue to add the other points here...
-			</Typography> */}
-			<Grid container padding={4}>
-				<Grid
-					item
-					md={12}
-					lg={6}
-					paddingX={isSmallScreen ? 2 : 10}
-					marginTop={5}
+			<Box
+				display="flex"
+				flexWrap="wrap"
+				justifyContent="space-evenly"
+				padding={4}
+			>
+				<Paper
+					elevation={3}
+					sx={{ padding: 3, maxWidth: "400px", mt: 3, borderRadius: 3 }}
 				>
 					<Typography
 						variant="h4"
 						gutterBottom
 						fontSize={isSmallScreen ? "1.7rem" : "2rem"}
 					>
-						Keep Your Data Safe
+						Upholding Data Integrity & Security
 					</Typography>
 					<Typography variant="body1" paragraph>
-						Security isn't just a checkbox for us—it's a fundamental pillar. At
-						DrivenMind.ai, we not only prioritize but also innovate in securing
-						sensitive data. By employing industry-leading techniques and
-						continuously updating our protocols, we ensure that all data—be it
-						customer details, internal communications, or proprietary
-						algorithms—remain shielded. Our advanced encryption methods and
-						rigorous access controls mean your organization can retain full
-						control over its data. Beyond just protection, we offer robust
-						monitoring tools, providing real-time insights into any data
-						interactions, thereby preventing unauthorized access or potential
-						leaks even before they can begin.
+						In today's digital age, security is foundational to our mission at
+						DrivenMind.ai. Far from being just a requirement, it's at the heart
+						of everything we do. Our proactive approach means we're not just
+						adhering to industry standards but actively defining them. We employ
+						advanced techniques and regularly update our protocols to safeguard
+						every piece of data, from customer details to proprietary
+						algorithms. Our robust encryption methods, combined with stringent
+						access controls, empower organizations to maintain total control
+						over their data. Moreover, our innovative monitoring tools offer
+						real-time visibility into data interactions, allowing for swift
+						intervention against unauthorized access or potential breaches. With
+						DrivenMind.ai, you're not just choosing a service; you're opting for
+						a dedicated partner in ensuring the utmost integrity and security of
+						your data.
 					</Typography>
-				</Grid>
-				<Grid item md={0} lg={6}>
-					<img
-						src={DataSecurity}
-						alt="data security"
-						style={{
-							width: "400px",
-							display: !isSmallScreen ? "block" : "none",
-						}}
-					/>
-				</Grid>
-				<Grid item md={0} lg={6}>
-					{" "}
-					<img
-						src={DataSecurity}
-						alt="data security"
-						style={{
-							width: "400px",
-							display: !isSmallScreen ? "block" : "none",
-						}}
-					/>
-				</Grid>
-				<Grid
-					item
-					md={12}
-					lg={6}
-					paddingX={isSmallScreen ? 2 : 10}
-					marginTop={5}
+				</Paper>
+				<Paper
+					elevation={3}
+					sx={{ padding: 3, maxWidth: "400px", mt: 3, borderRadius: 3 }}
 				>
 					<Typography
 						variant="h4"
@@ -86,26 +62,25 @@ const Platform = () => {
 						Enhanced Results
 					</Typography>
 					<Typography variant="body1" paragraph>
-						At DrivenMind.ai, our dedication isn't just about bringing AI to
-						your business—it's about harnessing the full power of AI to achieve
-						transformative results. Our bespoke solutions are crafted with your
-						unique business goals in mind, ensuring tailored strategies that
-						yield outcomes surpassing benchmarks. But results with DrivenMind.ai
-						are not just quantitative; they are qualitative. AI, in our hands,
-						doesn't just automate repetitive tasks. It provides valuable
-						insights, forecasts market trends, personalizes customer
-						experiences, and much more. In essence, partnering with us means
-						elevating every facet of your business—operations, customer
-						relations, innovation, and more—to unprecedented heights.
+						At DrivenMind.ai, our commitment transcends simply integrating AI
+						into your operations; it's about unlocking AI's transformative
+						potential tailored to your unique needs. Every solution we provide
+						is meticulously crafted, aligning with your business objectives to
+						ensure results that exceed industry standards. However, our vision
+						of AI's impact is comprehensive. Beyond task automation, we harness
+						AI for deep data insights, proactive market trend forecasts, and
+						enhanced customer engagement. By choosing DrivenMind.ai, you're not
+						just selecting a service—you're partnering with a team dedicated to
+						elevating every aspect of your business. Our AI solutions offer a
+						holistic improvement, from daily operations to customer relations
+						and innovative strategies. Together, we aim to position your
+						business at the pinnacle of success in a dynamic, AI-driven
+						landscape.
 					</Typography>
-				</Grid>
-
-				<Grid
-					item
-					md={12}
-					lg={6}
-					paddingX={isSmallScreen ? 2 : 10}
-					marginTop={5}
+				</Paper>
+				<Paper
+					elevation={3}
+					sx={{ padding: 3, maxWidth: "400px", mt: 3, borderRadius: 3 }}
 				>
 					<Typography
 						variant="h4"
@@ -115,30 +90,24 @@ const Platform = () => {
 						Easy to Use
 					</Typography>
 					<Typography variant="body1" paragraph>
-						Transitioning to new technology platforms can often feel daunting.
-						Recognizing this, DrivenMind.ai has gone the extra mile to make our
-						platform as intuitive as possible. We've invested significant
-						resources in user experience design, ensuring even those unfamiliar
-						with AI can navigate and utilize our platform with ease. Our
-						interactive tutorials, on-hand customer support, and a plethora of
-						resources aim to flatten the learning curve. We're not just
-						providers; we're partners in your AI journey. Our belief is firm:
-						AI's transformative potential should be accessible to all, from the
-						tech-savvy to the novice, ensuring every member of your team can
-						harness its power effectively and efficiently.
+						In today's tech-driven world, adapting to new platforms can be
+						overwhelming. At DrivenMind.ai, we're acutely aware of this
+						challenge and have prioritized making our platform user-friendly.
+						Our significant investment in user experience design ensures that
+						even those new to AI can navigate our platform effortlessly. We go
+						beyond intuitive design. Our platform features step-by-step
+						interactive tutorials and a dedicated customer support team, ready
+						to assist at any juncture. We also offer diverse resources, from
+						guides to webinars, to ensure a smooth transition for all users. At
+						DrivenMind.ai, we're more than just a service provider. We consider
+						ourselves partners in your AI journey. We believe that AI's vast
+						potential should be within reach for everyone, regardless of
+						technical expertise. Our goal is to empower every team member to
+						harness AI's capabilities, driving collective success for your
+						organization.
 					</Typography>
-				</Grid>
-				<Grid item md={0} lg={6}>
-					<img
-						src={DataSecurity}
-						alt="data security"
-						style={{
-							width: "400px",
-							display: !isSmallScreen ? "block" : "none",
-						}}
-					/>
-				</Grid>
-			</Grid>
+				</Paper>
+			</Box>
 		</Box>
 	);
 };

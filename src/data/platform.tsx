@@ -8,7 +8,7 @@ import PublicIcon from "@mui/icons-material/Public";
 const features = [
 	{
 		icon: <SecurityIcon fontSize="large" sx={{ color: "#8A2BE2" }} />,
-		title: "Keep Your Data Safe",
+		title: "Upholding Data Integrity & Security",
 		content:
 			"With industry leading techniques, we filter your sensitive data out before anything leaves your organisations control.",
 	},

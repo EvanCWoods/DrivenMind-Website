@@ -1,28 +1,29 @@
 import React from "react";
-import { Box, Typography, Grid, useMediaQuery } from "@mui/material";
-import DataSecurity from "../assets/data-security.png";
+import { Box, Typography, useMediaQuery, Paper } from "@mui/material";
+import aiTraining from "../assets/ai-training.png";
 
 const AITraining = () => {
 	const isSmallScreen = useMediaQuery("(max-width: 760px)");
 	return (
 		<Box>
-			<Typography
-				variant="h3"
-				gutterBottom
-				fontSize={isSmallScreen ? "2rem" : "3rem"}
-				marginTop={5}
-				textAlign="center"
-			>
-				AI Training
-			</Typography>
+			<img
+				src={aiTraining}
+				alt="ai training"
+				style={{
+					width: isSmallScreen ? "100%" : "70%",
+					marginLeft: isSmallScreen ? "0%" : "15%",
+				}}
+			/>
 
-			<Grid container padding={4}>
-				<Grid
-					item
-					md={12}
-					lg={6}
-					paddingX={isSmallScreen ? 2 : 10}
-					marginTop={5}
+			<Box
+				display="flex"
+				flexWrap="wrap"
+				justifyContent="space-evenly"
+				padding={4}
+			>
+				<Paper
+					elevation={3}
+					sx={{ padding: 3, maxWidth: "400px", mt: 3, borderRadius: 3 }}
 				>
 					<Typography
 						variant="h4"
@@ -32,43 +33,27 @@ const AITraining = () => {
 						Dedicated Training
 					</Typography>
 					<Typography variant="body1" paragraph>
-						Learn how to use AI effectively in your business from our
-						world-class experts. From training new staff to content creation, we
-						have you covered. Our trainers come with years of experience and
-						real-world insights, ensuring that the lessons are not just
-						theoretical but applicable. The structured modules are tailored for
-						every business need, providing step-by-step guidelines for a
-						seamless integration of AI into your operations.
+						Unlock the transformative power of artificial intelligence (AI) with
+						our top-tier experts. As AI continues to evolve, businesses must
+						leverage its capabilities, and we're here to guide you. Our team,
+						with their extensive real-world experience, ensures that you receive
+						practical, actionable insights. Training new staff in the realm of
+						AI? Our modules simplify this, offering clear instructions suitable
+						for both novices and veterans. Beyond training, AI's role in content
+						creation is undeniable. Our specialists will help you harness AI
+						tools to craft impactful content tailored to your audience. What
+						sets our training apart is its adaptability. Recognizing that every
+						business has unique challenges, our curriculum provides custom
+						guidelines for seamless AI integration, regardless of your business
+						size or industry. Partner with us to navigate AI's vast landscape,
+						positioning your business for future success.
 					</Typography>
-				</Grid>
-				<Grid item md={0} lg={6}>
-					<img
-						src={DataSecurity}
-						alt="data security"
-						style={{
-							width: "400px",
-							display: !isSmallScreen ? "block" : "none",
-						}}
-					/>
-				</Grid>
-				<Grid item md={0} lg={6}>
-					{" "}
-					<img
-						src={DataSecurity}
-						alt="data security"
-						style={{
-							width: "400px",
-							display: !isSmallScreen ? "block" : "none",
-						}}
-					/>
-				</Grid>
-				<Grid
-					item
-					md={12}
-					lg={6}
-					paddingX={isSmallScreen ? 2 : 10}
-					marginTop={5}
+				</Paper>
+				<Paper
+					elevation={3}
+					sx={{ padding: 3, maxWidth: "400px", mt: 3, borderRadius: 3 }}
 				>
+					{" "}
 					<Typography
 						variant="h4"
 						gutterBottom
@@ -77,21 +62,25 @@ const AITraining = () => {
 						Future Proof Your Business
 					</Typography>
 					<Typography variant="body1" paragraph>
-						Understanding how AI is changing business will ensure that your
-						company can thrive in the AI era. As technological advancements
-						continue to disrupt traditional business models, staying updated
-						with AI trends becomes vital. Embracing AI now positions your
-						business at the forefront of innovation, ensuring resilience against
-						market shifts and an ever-evolving digital landscape.
+						In today's digital era, grasping AI's impact on business is crucial
+						for success. As AI reshapes industries, understanding its trends
+						ensures your company's resilience. Traditional models face
+						disruption, highlighting the urgency to stay updated with AI
+						innovations. Embracing AI now is about more than staying
+						relevant—it's about future-proofing. This technology is transforming
+						tasks, enhancing decisions, and personalizing experiences. By
+						integrating AI, your business remains agile, adaptive, and ahead in
+						the innovation curve. With the rapid pace of AI development, early
+						adoption also positions your business as a leader rather than a
+						follower. Furthermore, AI-driven solutions offer a competitive edge,
+						setting you apart in the market. In short, to thrive in this
+						AI-driven world, recognizing its potential and weaving it into your
+						strategy is paramount.
 					</Typography>
-				</Grid>
-
-				<Grid
-					item
-					md={12}
-					lg={6}
-					paddingX={isSmallScreen ? 2 : 10}
-					marginTop={5}
+				</Paper>
+				<Paper
+					elevation={3}
+					sx={{ padding: 3, maxWidth: "400px", mt: 3, borderRadius: 3 }}
 				>
 					<Typography
 						variant="h4"
@@ -101,26 +90,24 @@ const AITraining = () => {
 						Gain a Competitive Advantage
 					</Typography>
 					<Typography variant="body1" paragraph>
-						AI can do many things better than humans, leaving you to focus on
-						what AI can't - running your business. By automating repetitive
-						tasks and optimizing workflows, AI can drastically reduce
-						operational costs and increase efficiency. This not only enhances
-						productivity but also provides you with valuable data-driven
-						insights, enabling smarter business decisions. Embrace AI, and
-						you'll be placing your business a step ahead of the competition.
+						In today's technological landscape, artificial intelligence (AI)
+						stands out as a tool that surpasses human capabilities in various
+						tasks. While AI excels in automation, data analysis, and pattern
+						recognition, it's the unique blend of AI and human intuition that
+						drives business success. By delegating repetitive tasks to AI, you
+						free up time for strategic decision-making. The integration of AI
+						into business operations not only streamlines processes but also
+						reduces costs. This efficiency leads to quicker, more accurate
+						results. Beyond automation, AI's ability to analyze vast datasets
+						offers valuable insights, aiding in informed decision-making and
+						anticipating market shifts. In an ever-competitive market,
+						integrating AI is a strategic move towards innovation and staying
+						ahead. By embracing AI, you position your business at the cutting
+						edge, ensuring a competitive edge and paving the way for continued
+						growth.
 					</Typography>
-				</Grid>
-				<Grid item md={0} lg={6}>
-					<img
-						src={DataSecurity}
-						alt="data security"
-						style={{
-							width: "400px",
-							display: !isSmallScreen ? "block" : "none",
-						}}
-					/>
-				</Grid>
-			</Grid>
+				</Paper>
+			</Box>
 		</Box>
 	);
 };
