@@ -1,6 +1,5 @@
 import { Box, Typography, useMediaQuery, Paper } from "@mui/material";
 import aiPlatform from "../assets/ai-platform.png";
-import { useNavigate } from "react-router-dom";
 
 const Platform = () => {
 	const isSmallScreen = useMediaQuery("(max-width: 760px)");
