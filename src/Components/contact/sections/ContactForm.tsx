@@ -56,7 +56,7 @@ const ContactForm: React.FC = () => {
 			sx={{
 				borderRadius: "15px",
 				padding: 3,
-				width: isSmallScreen ? "100%" : "420px",
+				width: isSmallScreen ? "100%" : "380px",
 			}}
 		>
 			<Typography variant="h4" paddingY={3} textAlign="center">
