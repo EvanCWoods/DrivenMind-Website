@@ -18,7 +18,7 @@ const faq: any = [
 	{
 		question: "What is the DrivenMind AI training program?",
 		answer:
-			"The DrivenMind AI training program is a program that teaches you how to use AI to automate tasks such as emails, content creation, and customer interactions in your business. It is designed to be easy to follow, and you will be able to start using AI in your business in no time.",
+			"The DrivenMind AI training program is a program that teaches you how to use AI to automate tasks such as software development, content creation, and customer interactions in your business. It is designed to be easy to follow, and you will be able to start using AI in your business in no time.",
 	},
 	{
 		question:
