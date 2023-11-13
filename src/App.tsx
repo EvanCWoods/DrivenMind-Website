@@ -10,6 +10,7 @@ import { Box } from "@mui/material";
 import ContactPage from "./Components/contact/ContactPage";
 import TrainingOverview from "./Components/overview/TrainingOverview";
 import AITraining from "./Components/AITraining";
+import Partners from "./Components/partners/Partners";
 
 function App() {
 	return (
@@ -24,6 +25,7 @@ function App() {
 								<Landing />
 								<PlatformOverview />
 								<TrainingOverview />
+								<Partners />
 								<FrequentlyAskedQuestions />
 							</Box>
 						}

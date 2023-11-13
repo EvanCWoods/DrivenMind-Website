@@ -21,7 +21,6 @@ const Header = () => {
 		navigate(path);
 		handleMenuClose();
 	};
-
 	return (
 		<Box
 			display="flex"
