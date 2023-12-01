@@ -13,7 +13,6 @@ const Platform = () => {
 					marginLeft: isSmallScreen ? "0%" : "15%",
 				}}
 			/>
-
 			<Box
 				display="flex"
 				flexWrap="wrap"

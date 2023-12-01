@@ -8,7 +8,7 @@ const partnerData = [
 	{
 		name: "Lighthouse Law",
 		logo: lighthousedLogo,
-		description: "DrivenMind Platform for Lawyers",
+		description: "DrivenMind Platform for Lawyers & AI Training",
 		website: "https://www.lawgroup.com.au/",
 	},
 	{

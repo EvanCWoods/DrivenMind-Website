@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Typography, useMediaQuery } from "@mui/material";
 // import Point from "../../../assets/WhatWeDoAssets/WhatWeDoPoint.svg";
-
 const benefits = [
 	"🚀 Supercharge your productivity with DrivenMind",
 	"🤖 Harness the power of AI, tailored to your business needs.",
